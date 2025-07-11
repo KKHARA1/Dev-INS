@@ -7,7 +7,7 @@ module "keyvlt" {
 
 }
 
-#For Secretuser1
+
 module "keyscrtuser" {
   depends_on    = [module.keyvlt, module.resource_group]
   source        = "../Child/azure_keysceret"
@@ -30,6 +30,17 @@ module "keyscrtpwd" {
 module "resource_group" {
   source      = "../Child/azure_resource_group"
   rg_name     = "kkrg-infra"
+  rg_location = "centralindia"
+
+}
+
+module "resource_group" {
+  source      = "../Child/azure_resource_group"
+
+  rg_name     = "kkrg-infra23"
+
+  rg_name     = "kkrg-infra1"
+
   rg_location = "centralindia"
 
 }
