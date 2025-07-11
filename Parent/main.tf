@@ -7,7 +7,7 @@ module "keyvlt" {
 
 }
 
-#For Secretuser
+#For Secretuser1
 module "keyscrtuser" {
   depends_on    = [module.keyvlt, module.resource_group]
   source        = "../Child/azure_keysceret"
